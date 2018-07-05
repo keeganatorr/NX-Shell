@@ -8,6 +8,7 @@
 #include "menu_gallery.h"
 #include "menu_music.h"
 #include "menu_book_reader.h"
+#include "menu_txt.h"
 #include "SDL_helper.h"
 #include "textures.h"
 #include "utils.h"
@@ -303,6 +304,9 @@ void Dirbrowse_OpenFile(void)
 	else if ((strncasecmp(FS_GetFileExt(file->name), "pdf", 3) == 0) || (strncasecmp(FS_GetFileExt(file->name), "cbz", 3) == 0)
 			|| (strncasecmp(FS_GetFileExt(file->name), "fb2", 3) == 0) || (strncasecmp(FS_GetFileExt(file->name), "epub", 4) == 0))
 		Menu_OpenBook(path);
+	else if ((strncasecmp(FS_GetFileExt(file->name), "txt", 3) == 0) || (strncasecmp(FS_GetFileExt(file->name), "cfg", 3) == 0)
+			|| (strncasecmp(FS_GetFileExt(file->name), "log", 3) == 0))
+		Menu_ShowText(path);
 
 	/*else if (strncasecmp(file->ext, "txt", 3) == 0)
 		TextViewer_DisplayText(path);*/

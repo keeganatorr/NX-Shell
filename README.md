@@ -17,6 +17,8 @@ Work in progress port of 3DShell (Multi purpose file manager) to the Nintendo Sw
 - Touch screen.
 - Ebook reader.
 
+- (beta) Text viewer (TXT/CFG/LOG)
+
 # Build instructions
 
 ```bash

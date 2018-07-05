@@ -1,0 +1,41 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "browse": {
+                "path": [
+                    "${workspaceFolder}"
+                ],
+                "limitSymbolsToIncludedHeaders": true
+            },
+            "includePath": [
+                "${workspaceFolder}",
+                "${workspaceFolder}/source",
+                "${workspaceFolder}/source/menus",
+                "${workspaceFolder}/source/audio",
+                "${workspaceFolder}/source/minizip",
+                "${workspaceFolder}/mupdf/include",
+                "${workspaceFolder}/mupdf/thirdparty/lcms2/utils/common",
+                "${workspaceFolder}/mupdf/thirdparty/lcms2/include",
+                "${workspaceFolder}/include",
+                "${workspaceFolder}/include/audio",
+                "${workspaceFolder}/include/menus",
+                "${workspaceFolder}/include/menus",
+                "${workspaceFolder}/include/minizip",
+                "C:\\devkitPro\\libnx\\include",
+                "C:\\devkitPro\\portlibs\\switch\\include",
+                "C:\\devkitPro\\portlibs\\switch\\include\\SDL2",
+                "C:\\devkitPro\\devkitA64\\aarch64-none-elf\\include"
+            ],
+            "defines": [
+                "DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "msvc-x64"
+        }
+    ],
+    "version": 4
+}

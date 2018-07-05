@@ -19,6 +19,7 @@ static void Term_Services(void)
 	TTF_CloseFont(Roboto_small);
 	TTF_CloseFont(Roboto);
 	TTF_CloseFont(Roboto_large);
+	TTF_CloseFont(RobotoMono_large);
 	TTF_Quit();
 
 	Mix_CloseAudio();
@@ -69,6 +70,7 @@ static void Init_Services(void)
 	Roboto_large = TTF_OpenFont("romfs:/res/Roboto-Regular.ttf", 30);
 	Roboto = TTF_OpenFont("romfs:/res/Roboto-Regular.ttf", 25);
 	Roboto_small = TTF_OpenFont("romfs:/res/Roboto-Regular.ttf", 20);
+	RobotoMono_large = TTF_OpenFont("romfs:/res/RobotoMono-Regular.ttf", 30);
 	Roboto_OSK = TTF_OpenFont("romfs:/res/Roboto-Regular.ttf", 50);
 	if (!Roboto_large || !Roboto || !Roboto_small || !Roboto_OSK)
 		Term_Services();

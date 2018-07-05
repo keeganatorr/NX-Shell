@@ -13,6 +13,10 @@ static inline SDL_Color SDL_MakeColour(Uint8 r, Uint8 g, Uint8 b, Uint8 a)
 #define STATUS_BAR_DARK       SDL_MakeColour(38, 50, 56, 255)
 #define MENU_BAR_LIGHT        SDL_MakeColour(51, 103, 214, 255)
 #define MENU_BAR_DARK         SDL_MakeColour(55, 71, 79, 255)
+#define STATUS_BAR_LIGHT_TSP  SDL_MakeColour(37, 79, 174, 127)
+#define STATUS_BAR_DARK_TSP   SDL_MakeColour(38, 50, 56, 127)
+#define MENU_BAR_LIGHT_TSP    SDL_MakeColour(51, 103, 214, 127)
+#define MENU_BAR_DARK_TSP     SDL_MakeColour(55, 71, 79, 127)
 #define BLACK                 SDL_MakeColour(0, 0, 0, 255)
 #define SELECTOR_COLOUR_LIGHT SDL_MakeColour(241, 241, 241, 255)
 #define SELECTOR_COLOUR_DARK  SDL_MakeColour(76, 76, 76, 255)
@@ -27,6 +31,7 @@ void SDL_ClearScreen(SDL_Renderer *renderer, SDL_Color colour);
 void SDL_DrawRect(SDL_Renderer *renderer, int x, int y, int w, int h, SDL_Color colour);
 void SDL_DrawCircle(SDL_Renderer *renderer, int x, int y, int r, SDL_Color colour);
 void SDL_DrawText(SDL_Renderer *renderer, TTF_Font *font, int x, int y, SDL_Color colour, const char *text);
+SDL_Rect SDL_GetTextSize(SDL_Renderer *renderer, TTF_Font *font, int x, int y, SDL_Color colour, const char *text);
 void SDL_DrawTextf(SDL_Renderer *renderer, TTF_Font *font, int x, int y, SDL_Color colour, const char* text, ...);
 void SDL_LoadImage(SDL_Renderer *renderer, SDL_Texture **texture, char *path);
 void SDL_LoadImageBuf(SDL_Renderer *renderer, SDL_Texture **texture, void *mem, int size);

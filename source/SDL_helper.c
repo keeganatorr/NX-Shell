@@ -35,6 +35,22 @@ void SDL_DrawText(SDL_Renderer *renderer, TTF_Font *font, int x, int y, SDL_Colo
 	SDL_DestroyTexture(texture);
 }
 
+SDL_Rect SDL_GetTextSize(SDL_Renderer *renderer, TTF_Font *font, int x, int y, SDL_Color colour, const char *text)
+{
+	SDL_Surface *surface = TTF_RenderText_Blended_Wrapped(font, text, colour, 1280);
+	SDL_SetSurfaceAlphaMod(surface, colour.a);
+	SDL_Texture *texture = SDL_CreateTextureFromSurface(renderer, surface);
+	SDL_FreeSurface(surface);
+	
+	SDL_Rect position;
+	position.x = x; position.y = y;
+	SDL_QueryTexture(texture, NULL, NULL, &position.w, &position.h);
+	//printf("X: %d, Y: %d, W: %d, H: %d\n",position.x,position.y,position.w,position.h);
+	//SDL_RenderCopy(renderer, texture, NULL, &position);
+	SDL_DestroyTexture(texture);
+	return position;
+}
+
 void SDL_DrawTextf(SDL_Renderer *renderer, TTF_Font *font, int x, int y, SDL_Color colour, const char* text, ...)
 {
 	char buffer[256];
